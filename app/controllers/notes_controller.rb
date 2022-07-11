@@ -50,6 +50,7 @@ class NotesController < ApplicationController
   # DELETE /notes/1 or /notes/1.json
   def destroy
     @note.destroy
+    binding.pry 
 
     respond_to do |format|
       format.html { redirect_to notes_url, notice: "Note was successfully destroyed." }
